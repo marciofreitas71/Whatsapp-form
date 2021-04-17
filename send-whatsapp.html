@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Formulário de diligências  Whatsapp</title>
+</head>
+<body>
+  <div class="jumbotron text-center" style="margin-bottom: 0" >
+      <div class="container-fluid">
+     <h1>Formulário de diligências  Whatsapp</h1>
+      </div>
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <ui class="nav-item">
+      <a class="nav-link" href="#">Link1</a>
+    </ui>
+    <ui class="nav-item">
+      <a class="nav-link" href="#">Link2</a>
+    </ui>
+  </ul>
+</nav>
+<div class="container">
+  <!--  formulário para enviar mensagens com texto para o whatsapp 
+(https://wa.me/whatsappphonenumber?text=urlencodedtext)-->
+<div class="form-group">
+<form id="formulario" style="margin-top:10px; margin-left:10px; align-items: center;">
+  
+    <label class="form-label" for="tel_eleitor" >Telefone:</label><br>
+  <input type="text" class="form-control input-sm" id="tel_eleitor" name="tel_eleitor" value=""><br>
+
+  <label class="form-label for="texto_mensagem">Mensagem:</label><br>
+  <textarea class="form-control" id="texto_mensagem" name="texto_mensagem" rows="20" cols="30" ></textarea>
+  <br>
+
+  <input class="btn btn-primary" type="button" value="Iniciar chat" onclick="sendWhatsapp()">
+</form>
+</div>
+</div>
+
+<script>
+  
+    function sendWhatsapp (){
+      var telefone = document.getElementById("tel_eleitor").value;
+      var nome_eleitor = document.getElementById("nome_eleitor");
+      var mensagem = document.getElementById("texto_mensagem").value;
+      window.location.assign('https://wa.me/55' + telefone + "?text=" + mensagem);
+  }
+  </script>
+</div>
+<br>
+
+<div class="jumbotron text-center bg-dark navbar-dark" style="margin-bottom:0; height: 50px; padding-top: 10px; padding-bottom: 10px;">
+  <p>Justiça Eleitoral da Bahia</p>
+</div>
+</body>
+</html>
+
+
